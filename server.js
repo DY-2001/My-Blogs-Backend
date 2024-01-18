@@ -8,8 +8,9 @@ const app = express();
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const multer = require("multer");
-const uploadMiddleware = multer({ dest: "uploads/" });
 const fs = require("fs");
+app.use(cors({origin: "https://my-blogs-frontend.vercel.app/"}));
+const uploadMiddleware = multer({ dest: "uploads/" });
 const { resourceUsage } = require("process");
 
 const salt = bcrypt.genSaltSync(10);
@@ -19,7 +20,6 @@ const secret = "asdfe45we45w345wegw345werjktjwertkj";
 //   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 //   next();
 // });
-app.use(cors({origin: "https://my-blogs-frontend.vercel.app/"}));
 
 app.use(express.json());
 app.use(cookieParser());
