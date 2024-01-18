@@ -10,7 +10,7 @@ const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const fs = require("fs");
 // app.use(cors());
-app.use(cors({credentials: true, origin: 'http://localhost:3000'}));
+app.use(cors({credentials: true, origin: 'https://my-blogs-frontend.vercel.app'}));
 const uploadMiddleware = multer({ dest: "uploads/" });
 const { resourceUsage } = require("process");
 
