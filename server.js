@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const fs = require("fs");
-app.use(cors({origin: "https://my-blogs-frontend.vercel.app/"}));
+app.use(cors({credentials: true, origin: "https://my-blogs-frontend.vercel.app/"}));
 const uploadMiddleware = multer({ dest: "uploads/" });
 const { resourceUsage } = require("process");
 
