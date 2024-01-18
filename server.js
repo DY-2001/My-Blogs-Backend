@@ -14,7 +14,7 @@ const { resourceUsage } = require("process");
 
 const salt = bcrypt.genSaltSync(10);
 const secret = "asdfe45we45w345wegw345werjktjwertkj";
-app.use(cors(origin:"https://my-blogs-frontend.vercel.app/"));
+app.use(cors(origin: '*'));
 
 app.use(express.json());
 app.use(cookieParser());
